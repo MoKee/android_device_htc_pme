@@ -23,7 +23,7 @@ import android.view.KeyEvent;
 
 import com.android.internal.os.DeviceKeyHandler;
 
-import cyanogenmod.hardware.CMHardwareManager;
+import mokee.hardware.MKHardwareManager;
 
 public class KeyHandler implements DeviceKeyHandler {
 
@@ -39,8 +39,8 @@ public class KeyHandler implements DeviceKeyHandler {
 
     public boolean handleKeyEvent(KeyEvent event) {
         if (event.getKeyCode() == KeyEvent.KEYCODE_HOME && event.getScanCode() == 143) {
-            CMHardwareManager hardware = CMHardwareManager.getInstance(mContext);
-            boolean virtualKeysEnabled = hardware.get(CMHardwareManager.FEATURE_KEY_DISABLE);
+            MKHardwareManager hardware = MKHardwareManager.getInstance(mContext);
+            boolean virtualKeysEnabled = hardware.get(MKHardwareManager.FEATURE_KEY_DISABLE);
 
             if (DEBUG) {
                 Log.d(TAG, "home key " + (virtualKeysEnabled ? "filtered" : "delivered"));
