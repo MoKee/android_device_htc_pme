@@ -3,7 +3,7 @@
 /dev/rt5501                                 u:object_r:audio_device:s0
 /dev/tfa9888                                u:object_r:audio_device:s0
 
-# CMHW
+# MKHW
 /sys/devices/virtual/timed_output/vibrator/voltage_level u:object_r:vibeamp_sysfs:s0
 
 # Encryption
